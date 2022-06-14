@@ -34,4 +34,13 @@ class AccountTest {
         Assertions.assertEquals(50.0, account.getMoney());
         Assertions.assertEquals(50.0, result);
     }
+
+    @Test
+    void testWithdrawMoneyError() {
+        account.deposit(100.0);
+        Double result = account.withdrawMoney(200.0);
+
+        Assertions.assertEquals(100.0, account.getMoney());
+        Assertions.assertEquals(0.0, result);
+    }
 }
