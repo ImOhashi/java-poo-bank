@@ -20,6 +20,17 @@ public class Account {
         }
     }
 
+    public Double withdrawMoney(Double value) {
+        if (value > 0 && value <= this.money) {
+            System.out.println("R$ " + value + " retirado com sucesso!");
+            this.money -= value;
+            return value;
+        }
+
+        System.out.println("Valor solicitado inválido!");
+        return 0.0;
+    }
+
     public String getName() {
         return name;
     }
