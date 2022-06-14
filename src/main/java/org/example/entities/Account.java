@@ -6,12 +6,13 @@ public class Account {
         this.name = name;
         this.cpf = cpf;
     }
+
     private String name;
     private final String cpf;
-    private Double money;
+    private Double money = 0.0;
 
     public void deposit(Double value) {
-        if(value > 0) {
+        if (value > 0) {
             this.money += value;
             System.out.println("R$ " + value + " depositado com sucesso!");
         } else {
